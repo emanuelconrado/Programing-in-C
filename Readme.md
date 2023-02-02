@@ -1,4 +1,4 @@
-Boby Mass Index Calculator
+Body Mass Index Calculator
 
 Weight - Kilograms
 
