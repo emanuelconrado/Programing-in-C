@@ -1,4 +1,5 @@
-BMI Calculator
+Boby Mass Index Calculator
 
-weight - Kilograms
-height - metres
+Weight - Kilograms
+
+Height - Metres
