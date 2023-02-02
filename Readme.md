@@ -1,4 +1,4 @@
-Body Mass Index Calculator
+Body Mass Index Calculator and Body Water Calculator
 
 Weight - Kilograms
 
