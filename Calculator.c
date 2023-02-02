@@ -32,10 +32,19 @@ void BmiStatus(float BMI){
 
 int main(){
     
-    float height, weight, BMI;
-    char F, loop, trash;
+    float height, weight, BMI, litres;
+    char F, loop, function, trash;
 
-    while(loop = 'y' || loop == 'Y'){
+    puts("What do you want calculate?");
+    puts("Type 'B' to calculate Body Mass index");
+    puts("or type 'W' to calculate 'How much water you should drink'");
+
+    scanf("%c", &function);
+
+    if(function == 'B' || function == 'b'){
+        loop = 'y';
+        
+        while(loop == 'y' || loop == 'Y'){
         printf("Your Weight (KG):");
         scanf("%f%c", &weight, &trash);
         printf("Your Height (Metres) (Exemple: 1.70):");
@@ -54,6 +63,31 @@ int main(){
             break;
         }
     }
+    }else if(function == 'W' || function == 'w'){
+        loop = 'y';
+
+        while(loop == 'y' || loop == 'Y' ){
+
+            printf("Your Weight (KG):");
+            scanf("%f%c", &weight, &trash);
+
+            litres = 000.035*weight;
+            printf("%.2f litres\n", litres);
+
+            puts("Type 'Y' to calculate another BMI or 'N' to exit");
+            scanf("%c%c",&loop, &trash);
+
+            if(loop == 'n' || loop == 'N'){
+            break;
+        }
+
+        }
+
+    }else{
+        puts("This function is not available");
+        scanf("%c", &trash);
+    }
+
     puts("Press Enter to finish the program");
     scanf("%c", &F);
 
