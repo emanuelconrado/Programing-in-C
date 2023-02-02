@@ -11,6 +11,21 @@ void BodyMass(float weight, float height, float *BMI){
 
 }
 
+/*Function BMI Status*/
+void BmiStatus(float BMI){
+     
+     if(BMI < 18.5){
+        puts("Underweight");
+    }else if(BMI < 24.9){
+        puts("Normal");
+    }else if(BMI < 34.9){
+        puts("Obese");
+    }else{
+        puts("Extremely Obese");
+    }
+    
+}
+
 int main(){
     
     float height, weight, BMI;
@@ -23,25 +38,12 @@ int main(){
 
     BodyMass(weight, height, &BMI);
 
-    if(BMI < 18.5){
-        puts("Underweight");
-    }else if(BMI < 24.9){
-        puts("Normal");
-    }else if(BMI < 34.9){
-        puts("Obese");
-    }else{
-        puts("Extremely Obese");
-    }
+    BmiStatus(BMI);
 
     printf("BMI: %.2f\n", BMI);
 
     puts("Press Enter to finish the program");
     scanf("%c%c", &M, &C);
-
-    
-
-    
-
 
     return 0;
 }
